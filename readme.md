@@ -55,6 +55,12 @@
 **TODOs:**
 - [ ] Add more talks and resources.
 
+- https://github.com/ConsenSys/scribble-exercise-2
+- https://github.com/ConsenSys/scribble-exercise-3
+- https://github.com/ConsenSys/scribble-exercise-4
+- https://github.com/ConsenSys/scribble-exercise-5
+- https://github.com/ConsenSys/scribble-exercise-6
+
 
 ### Diligence Fuzzing (DF)
 
