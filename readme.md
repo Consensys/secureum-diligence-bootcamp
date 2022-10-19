@@ -6,12 +6,15 @@
 
 TBA
 
+
 ## Resources/Links
 
 ### Scribble
 
 - [Scribble documentation](https://docs.scribble.codes)
 - [Scribble open-source tool](https://github.com/ConsenSys/Scribble)
+- [Scribbling Smart Contracts for fun - and profit!](https://www.youtube.com/watch?v=gGOK8CXdrGs) (presentation at UnChained 2022)
+- [Scribble workshop at Unchained 2021](https://www.youtube.com/watch?v=zWgb5OqBQxY)
 
 
 ### Diligence Fuzzing (DF)
