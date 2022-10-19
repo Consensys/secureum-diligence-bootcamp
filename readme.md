@@ -30,7 +30,12 @@
   2) write a test case that triggers the assertion violation
 
 **TODOs:**
-- [ ] Add more exercises.
+- [ ] Add more exercises. Possibly from these repos:
+  + https://github.com/ConsenSys/scribble-exercise-2
+  + https://github.com/ConsenSys/scribble-exercise-3
+  + https://github.com/ConsenSys/scribble-exercise-4
+  + https://github.com/ConsenSys/scribble-exercise-5
+  + https://github.com/ConsenSys/scribble-exercise-6
 
 
 #### Diligence Fuzzing
@@ -54,12 +59,6 @@
 
 **TODOs:**
 - [ ] Add more talks and resources.
-
-- https://github.com/ConsenSys/scribble-exercise-2
-- https://github.com/ConsenSys/scribble-exercise-3
-- https://github.com/ConsenSys/scribble-exercise-4
-- https://github.com/ConsenSys/scribble-exercise-5
-- https://github.com/ConsenSys/scribble-exercise-6
 
 
 ### Diligence Fuzzing (DF)
