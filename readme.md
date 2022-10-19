@@ -1,13 +1,49 @@
-# Secureum X Diligence bootcamp (November 3–9, 2022)
+# Secureum X Diligence bootcamp: Writing Scribble Specifications and Using Diligence Fuzzing (November 3–9, 2022)
 
+
+TODOs:
+- [ ] Add a short intro.
 
 
 ## Schedule
 
-TBA
+
+TODOs:
+- [ ] Add the schedule (incl. times, Zoom links, etc.).
 
 
 ## Resources/Links
+
+### Lectures
+
+TODOs:
+- [ ] Add links to lecture recordings.
+
+
+### Exercises
+
+#### Scribble
+
+##### Warmup exercise (https://github.com/ConsenSys/scribble-exercise-1)
+
+  1) add the specification
+  2) write a test case that triggers the assertion violation
+
+TODOs:
+- [ ] Add more exercises.
+
+
+#### Diligence Fuzzing
+
+##### Warmup exercise (https://github.com/ConsenSys/scribble-exercise-1)
+
+  1) add the specification (see Scribble exercise)
+  2) set up a fuzzing campaign
+  3) run a fuzzing campaign and check that it finds the assertion violation
+
+TODOs:
+- [ ] Add more exercises.
+
 
 ### Scribble
 
@@ -16,11 +52,17 @@ TBA
 - [Scribbling Smart Contracts for fun - and profit!](https://www.youtube.com/watch?v=gGOK8CXdrGs) (presentation at UnChained 2022)
 - [Scribble workshop at Unchained 2021](https://www.youtube.com/watch?v=zWgb5OqBQxY)
 
+TODOs:
+- [ ] Add more talks and resources.
+
 
 ### Diligence Fuzzing (DF)
 
 - [DF docs](https://fuzzing-docs.diligence.tools)
 - [DF command-line tool](https://github.com/ConsenSys/diligence-fuzzing)
+
+TODOs:
+- [ ] Add more talks and resources.
 
 
 #### Harvey Fuzzer (optional)
