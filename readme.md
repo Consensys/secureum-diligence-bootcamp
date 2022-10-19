@@ -24,7 +24,7 @@ TBA
 
 - [Harvey: A Greybox Fuzzer for Smart Contracts](https://mariachris.github.io/Pubs/FSE-2020-Harvey.pdf) (paper published at ESEC/FSE 2020)
 - [Short summary video on Harvey](https://www.youtube.com/watch?v=Wv-uIknuhgs)
-- [Full conference presentation on Harvey](https://www.youtube.com/watch?v=Wv-uIknuhgs)
+- [Conference presentation on Harvey](https://www.youtube.com/watch?v=Wv-uIknuhgs)
 - [Finding Vulnerabilities in Smart Contracts](https://medium.com/consensys-diligence/finding-vulnerabilities-in-smart-contracts-175c56affe2) (blog post)
 - [Fuzzing Smart Contracts Using Input Prediction](https://medium.com/consensys-diligence/fuzzing-smart-contracts-using-input-prediction-29b30ba8055c) (blog post)
 - [Fuzzing Smart Contracts Using Multiple Transactions](https://medium.com/consensys-diligence/fuzzing-smart-contracts-using-multiple-transactions-51471e4b3c69) (blog post)
