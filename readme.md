@@ -52,6 +52,10 @@ This bootcamp is a collaboration between [Secureum](https://www.secureum.xyz) an
 
 ## Resources/Links
 
+**TODOs:**
+- [ ] Add link to the discord channel.
+
+
 ### Lectures
 
 **TODOs:**
