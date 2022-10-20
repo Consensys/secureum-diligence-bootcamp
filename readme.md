@@ -1,15 +1,53 @@
 # Secureum X Diligence bootcamp: Writing Scribble Specifications and Using Diligence Fuzzing (November 3–9, 2022)
 
+This bootcamp is a collaboration between [Secureum](https://www.secureum.xyz) and [ConsenSys Diligence](https://consensys.net/diligence). We will teach participants how to specify custom correctness properties for their smart contracts using our [Scribble language](https://consensys.net/diligence/scribble). We will also introduce them to our [Diligence Fuzzing service](https://consensys.net/diligence/fuzzing) and show them how to use fuzzing to find property violations automatically.
+
+
+## Schedule (preliminary)
+
+### Day 1
+
+- **intro lecture to Scribble (30-45 min)**
+
+
+### Day 2
+
+- **advanced Scribble lecture (30-45 min)**
+
+- **office hour (60 min, get help with Scribble exercises and discuss solutions)**
+
+
+### Day 3
+
+- **intro lecture to DF (30 min)**
+
+- **office hour (60 min, get help with Scribble exercises and discuss solutions)**
+
+
+### Day 4
+
+- **advanced DF lecture (e.g., differential fuzzing and other advanced topics) (30-45 min)**
+
+- **office hour (60 min, get help with Scribble/DF exercises and discuss solutions)**
+
+
+### Day 5
+
+- **office hour (60 min, get help with Scribble/DF exercises and discuss solutions)**
+
 
 **TODOs:**
-- [ ] Add a short intro.
+- [ ] Add a more detailed schedule (incl. times, Zoom links, etc.).
 
 
-## Schedule
+## Instructors
 
+- [Dimitar Bounov](https://github.com/cd1m0)
+- [Joran Honig](https://joranhonig.nl)
+- [Valentin Wüstholz](http://www.wuestholz.com)
 
 **TODOs:**
-- [ ] Add the schedule (incl. times, Zoom links, etc.).
+- [ ] Maybe add other contact info (e.g., Discord user name).
 
 
 ## Resources/Links
