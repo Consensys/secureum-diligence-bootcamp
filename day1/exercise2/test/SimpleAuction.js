@@ -1,6 +1,6 @@
 const { expect } = require("chai");
 
-describe("Purchase", async function () {
+describe("SimpleAuction", async function () {
   let purchase;
   let acct1
   let acct2
@@ -10,11 +10,10 @@ describe("Purchase", async function () {
     acct1 = _acct1;
     acct2 = _acct2;
 
-    const PurchaseContract = await ethers.getContractFactory("Purchase");
-    purchase = await PurchaseContract.connect(acct1).deploy();
+    const SimpleAuctionContract = await ethers.getContractFactory("SimpleAuction");
+    purchase = await SimpleAuctionContract.connect(acct1).deploy(1000, acct1.address);
   });
 
   it("Write your test here...", async () => {
-    /// TODO
   })
 });

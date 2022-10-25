@@ -18,52 +18,37 @@ npm install
 
 ## Invariants
 
-In this exercise we will look at an example escrow contract taken from the
+In this exercise we will look at an example auction contract taken from the
 [solidity
-documentation](https://docs.soliditylang.org/en/v0.8.17/solidity-by-example.html#safe-remote-purchase).
+documentation](https://docs.soliditylang.org/en/v0.8.17/solidity-by-example.html#simple-open-auction).
 
-The `Purchase` contract implements a state machine that locks 2x the amounts of
-funds neccessary for a purchase from both a seller and a buyer, and upon
-successful confirmation from the buyer releases the funds appropriately. Locking
-funds from both parties disincetivises bad behavior from both.
+The `SimpleAuction` contract implements a timed open auction, where users may vote, delegate their votes, and votes can be finally tallied.
+Additionally the chairperson may end the auction and tally the votes, but only after the time period has expired.
 
-Central to the correctness of this contract is that it implements a state machine correctly, and only the
-right actor (buyer or seller) can trigger a specific transition. In English, we can state the transitions as follows:
+Write a `#invariant` annotation on the entire contract, that checks that:
 
-1. We can move into the `Locked` state only from the `Created` state. After moving into the `Locked` state, the `msg.sender` becomes the `buyer`.
-
-2. We can move into the `Release` state only from the `Locked` state. Only the `buyer` can do this move.
-
-Express the above 2 annotations as `#invaraint`s on the whole contract. 
+The auction may only end (as marked by the value of the `ended` state variable), after the auction time has ran out.
 
 ## Instrumenting and testing
 
 Instrument the contract as we have shown you before.
 
 ```
-scribble --arm contracts/Purchase.sol --output-mode files
+scribble --arm contracts/SimpleAuction.sol --output-mode files
 ```
 
-We have added the skeleton of an empty test under `test/Purchase.js`. Feel free to add your own test code there to check the transitions after arming.
-You can run your tests using:
+Write a test, that tries to end an auction, before the time has passed (use the starting code in tests/SimpleAuction.js). Try running your tests with:
 
 ```
 npx hardhat test
 ```
 
-
-We have introduced a bug in the contract. The bug is related to the state
-transitions, and your annotations should be able to catch it. However to catch
-the bug, you must also write tests to exercise your code. Can you write a test
-to catch that bug, using the instrumented code?
-
-(Hint: Look at the annotations you have written, and think about edge cases you can test)
-
+You should be able to cause your annotation to fail.
 
 ## Restoring our code
 
 You can always restore the original code using:
 
 ```
-scribble --disarm contracts/Purchase.sol --output-mode files
+scribble --disarm contracts/SimpleAuction.sol --output-mode files
 ```
