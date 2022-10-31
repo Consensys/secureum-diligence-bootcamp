@@ -8,18 +8,25 @@ This bootcamp is a collaboration between [Secureum](https://www.secureum.xyz) an
 ### Day 1
 
 - **intro lecture to Scribble (30-45 min)**
+  1) provides an overview of Scribble and key language features
+  2) introduce course website with exercises, resources, etc.
+  3) introduces initial Scribble exercises
 
 
 ### Day 2
 
 - **advanced Scribble lecture (30-45 min)**
+  1) introduces more advanced Scribble features (e.g., if_updated, quantifiers, and assert/let)
+  2) introduces additional Scribble exercises
 
 - **office hour (60 min, get help with Scribble exercises and discuss solutions)**
 
 
 ### Day 3
 
-- **intro lecture to DF (30 min)**
+- **intro lecture to Diligence Fuzzing (30-45 min)**
+  1) provides an overview of DF and shows how to fuzz a simple contract
+  2) introduces initial DF exercises
 
 - **office hour (60 min, get help with Scribble exercises and discuss solutions)**
 
@@ -27,6 +34,9 @@ This bootcamp is a collaboration between [Secureum](https://www.secureum.xyz) an
 ### Day 4
 
 - **advanced DF lecture (e.g., differential fuzzing and other advanced topics) (30-45 min)**
+  1) introduces more advanced DF features (e.g., fuzzing lessons)
+  2) provides an overview of what's going on under the hood in Harvey
+  3) introduces additional fuzzing exercises
 
 - **office hour (60 min, get help with Scribble/DF exercises and discuss solutions)**
 
@@ -42,12 +52,9 @@ This bootcamp is a collaboration between [Secureum](https://www.secureum.xyz) an
 
 ## Instructors
 
-- [Dimitar Bounov](https://github.com/cd1m0)
-- [Joran Honig](https://joranhonig.nl)
-- [Valentin Wüstholz](http://www.wuestholz.com)
-
-**TODOs:**
-- [ ] Maybe add other contact info (e.g., Discord user name).
+- [Dimitar Bounov](https://github.com/cd1m0) (Dimo#9871)
+- [Joran Honig](https://joranhonig.nl) (walker#3905)
+- [Valentin Wüstholz](http://www.wuestholz.com) (wuestholz#3558)
 
 
 ## Resources/Links
