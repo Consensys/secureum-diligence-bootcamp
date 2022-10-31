@@ -1,15 +1,20 @@
 # Example1: Administrable
 
-In this example we will learn how to use universal qunatification (forall) over
-containers (maps and arrays) in Scribble.
+In this example we will learn how to use annotations on individual state
+variables - `#if_updated` and `#if_assigned`.  We will use the same sample
+`Administrable` contract as the previous `forall` exercise, but this time
+instead of adding the annotation as an `#invariant` that is checked at
+observable points on the contract, we will add it as an
+`#if_updated`/`#if_assigned` annotation that is checked each time the target
+state variable is updated.
 
 ## Setup
 
-To run this tutorial you will need `git`, `node` (verison 16.0 or later) and `npm`.
+To run this tutorial you will need `git`, `node` (version 16.0 or later) and `npm`.
 After you have checked out this repo, you can install the needed packages by running:
 
 ```
-cd day2/example1_quantifiers
+cd day2/example2_if_updated/
 npm install
 ```
 
@@ -17,20 +22,23 @@ npm install
 
 In `contracts/Administrable.sol` we have provided a simple contract that maintains a list of administrator, allows adding a new administrator (by a current one) and querying whether some address is an admin. Admins are stored in 2 ways - as a list of addresses, and as a mapping from address to bool, allowing for quicker access.
 
-Below are 2 properties we may want to check for this contract:
+Lets try to check the following property:
 
-1. The 0 address is never an admin
-2. For every address `x` in the `admins` array, `isAdmin[x]` is true.
+"The 0 address is never an admin"
 
-Both of those can be expressed as a 'forall`. Even though property 1 doesn't have the words 'for all' in it, we can paraphrase it as "for every address `x` in `admins`/`isAdmin`, `x` is not 0".
-
-We can formalize these two informal properties in scribble, as the following contract invariants:
+We can formalize this informal property in scribble, as the following `#if_updated` annotation on the state variables themselves:
 
 ```
-/// #invariant forall (address a in isAdmin) a != address(0);
-/// #invariant forall (uint i in admins) isAdmin[admins[i]];
-contract Administrable {
+/// #if_updated forall (address a in isAdmin) a != address(0);
+address[] admins;
+
+/// #if_updated forall (address x in isAdmin) x != address(0);
+mapping (address => bool) public isAdmin;
 ```
+
+The added annotations will be checked *each* time that the state variables are updated, even if only a single field is updated.
+
+At this point you should be able to instrument the code with scribble, run the tests and verify that one test fails:
 
 ## Instrumenting with scribble
 
@@ -82,3 +90,48 @@ We can undo our instrumentation as usual with:
 ```
 scribble --disarm contracts/Administrable.sol --output-mode files
 ```
+
+## Checking with #if_assigned
+
+The annotations we added walk over all entries in the `admins`/`isAdmin` variables, even if we are only updating only one entry. This is a little wasteful.
+To fix this, we also provide an alternative `#if_assigned` annotation. Unlike `#if_updated`, `#if_assigned` allows us to talk about updates to a specific part of a datastructure. For example, if we want to only check something when an *individual* entry in the `admins` array is updated, we can write this as follows:
+
+```
+  /// #if_assigned[i] admins[i] != address(0);
+  address[] admins;
+```
+
+Note the `[i]` after `if_assigned`. This allows us to talk about the case when only the `i`-th entry is updated, and we can directly check something on just that update. This way we can re-write our original `if_updated` annotations as `if_assigned` as follows:
+
+```
+  /// #if_assigned[i] admins[i] != address(0);
+  address[] admins;
+
+  /// #if_assigned[x] x != address(0);
+  mapping (address => bool) public isAdmin;
+```
+
+You should again be able to instrument the code, run tests, and verify that one test fails.
+
+WARNING: `if_assigned` can be a little tricky. Because it talks about only one part of the datastructure, its possible that values change unexpectedly. For example if you have:
+
+```
+  /// #if_assigned[i] admins[i] != address(0);
+  address[] admins;
+```
+
+you might expect that its not possible for the `admins` array to contain 0s. However this possible with the following 2 statements:
+
+```
+admins = [address(0), address(0)];
+```
+
+or
+
+```
+admins.push(address(0));
+```
+
+Since in those 2 statements we are simultaneously changing some values, and potentially adding/deleting values, its hard to instrument those with `if_assigned`, so for now we omit those.
+
+As a rule of thumb, always try to use `if_updated` as its safer (its checked on *any* updated). Only use `if_assigned` if you can't express what you need with `if_updated`, or if the instrumentation overhead is too large.
