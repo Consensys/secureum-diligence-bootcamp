@@ -1,7 +1,7 @@
 const { expect } = require("chai");
 
 describe("BatchSend", async function () {
-  let adminitrable;
+  let batch;
   let acct1
   let acct2
   let acct3
