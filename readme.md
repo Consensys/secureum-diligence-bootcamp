@@ -52,7 +52,7 @@ This bootcamp is a collaboration between [Secureum](https://www.secureum.xyz) an
 
 ## Instructors
 
-- [Dimitar Bounov](https://github.com/cd1m0) (Dimo#9871)
+- [Dimitar Bounov](https://github.com/cd1m0) (Dimo#1001)
 - [Joran Honig](https://joranhonig.nl) (walker#3905)
 - [Valentin Wüstholz](http://www.wuestholz.com) (wuestholz#3558)
 
