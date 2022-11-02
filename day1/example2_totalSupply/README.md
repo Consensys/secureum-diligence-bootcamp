@@ -43,7 +43,7 @@ The reason for checking that this property is true only when the contract is not
     _balances[_to] += _value;
 ```
 
-Right between those two lines, the property stated above is temporarily violated. But its established right after the second line, and well before we exit the call to `transferFrom`.
+Right between those two lines, the property stated above is temporarily violated. But it's established right after the second line, and well before we exit the call to `transferFrom`.
 
 We can express this property with the following annotation:
 
