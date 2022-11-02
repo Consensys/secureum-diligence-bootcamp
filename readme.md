@@ -46,10 +46,6 @@ This bootcamp is a collaboration between [Secureum](https://www.secureum.xyz) an
 - **office hour (60 min)**: get help with Scribble/DF exercises and discuss solutions
 
 
-**TODOs:**
-- [ ] Add a more detailed schedule (incl. times, Zoom links, etc.).
-
-
 ## Instructors
 
 - [Dimitar Bounov](https://github.com/cd1m0) (Dimo#1001)
@@ -59,44 +55,33 @@ This bootcamp is a collaboration between [Secureum](https://www.secureum.xyz) an
 
 ## Resources/Links
 
-**TODOs:**
-- [ ] Add link to the discord channel.
+### Lecture notes/slides
 
-
-### Lectures
-
-**TODOs:**
-- [ ] Add links to lecture recordings.
+TBA
 
 
 ### Exercises
 
-#### Scribble
+#### Day 1
 
-##### Warmup exercise (https://github.com/ConsenSys/scribble-exercise-1)
-
-  1) add the specification
-  2) write a test case that triggers the assertion violation
-
-**TODOs:**
-- [ ] Add more exercises. Possibly from these repos:
-  + https://github.com/ConsenSys/scribble-exercise-2
-  + https://github.com/ConsenSys/scribble-exercise-3
-  + https://github.com/ConsenSys/scribble-exercise-4
-  + https://github.com/ConsenSys/scribble-exercise-5
-  + https://github.com/ConsenSys/scribble-exercise-6
+- [Exercise 1](https://github.com/ConsenSys/secureum-diligence-bootcamp/tree/main/day1/exercise1)
+- [Exercise 2](https://github.com/ConsenSys/secureum-diligence-bootcamp/tree/main/day1/exercise2)
+- [Exercise 3](https://github.com/ConsenSys/secureum-diligence-bootcamp/tree/main/day1/exercise3)
 
 
-#### Diligence Fuzzing
+#### Day 2
 
-##### Warmup exercise (https://github.com/ConsenSys/scribble-exercise-1)
+- [Exercise 1](https://github.com/ConsenSys/secureum-diligence-bootcamp/tree/main/day2/exercise1)
+- [Exercise 2](https://github.com/ConsenSys/secureum-diligence-bootcamp/tree/main/day2/exercise2)
 
-  1) add the specification (see Scribble exercise)
-  2) set up a fuzzing campaign
-  3) run a fuzzing campaign and check that it finds the assertion violation
 
-**TODOs:**
-- [ ] Add more exercises.
+#### Day 3
+
+TBA
+
+#### Day 4
+
+TBA
 
 
 ### Scribble
@@ -106,17 +91,11 @@ This bootcamp is a collaboration between [Secureum](https://www.secureum.xyz) an
 - [Scribbling Smart Contracts for fun - and profit!](https://www.youtube.com/watch?v=gGOK8CXdrGs) (presentation at UnChained 2022)
 - [Scribble workshop at Unchained 2021](https://www.youtube.com/watch?v=zWgb5OqBQxY)
 
-**TODOs:**
-- [ ] Add more talks and resources.
-
 
 ### Diligence Fuzzing (DF)
 
 - [DF docs](https://fuzzing-docs.diligence.tools)
 - [DF command-line tool](https://github.com/ConsenSys/diligence-fuzzing)
-
-**TODOs:**
-- [ ] Add more talks and resources.
 
 
 #### Harvey Fuzzer (optional)
