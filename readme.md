@@ -55,7 +55,24 @@ This bootcamp is a collaboration between [Secureum](https://www.secureum.xyz) an
 
 ## Resources/Links
 
-### Lecture notes/slides
+### Lectures
+
+#### Day 1
+
+TBA
+
+
+#### Day 2
+
+TBA
+
+
+#### Day 3
+
+TBA
+
+
+#### Day 4
 
 TBA
 
@@ -78,6 +95,7 @@ TBA
 #### Day 3
 
 TBA
+
 
 #### Day 4
 
