@@ -21,7 +21,7 @@ npm install
 
 ## The problem
 
-In `contracts/Administrable.sol` we have provided a simple contract that maintains a list of administrator, allows adding a new administrator (by a current one) and querying whether some address is an admin. Admins are stored in 2 ways - as a list of addresses, and as a mapping from address to bool, allowing for quicker access.
+In `contracts/Administrable.sol` we have provided a simple contract that maintains a list of administrators, allows adding a new administrator (by a current one) and querying whether some address is an admin. Admins are stored in 2 ways - as a list of addresses, and as a mapping from address to bool, allowing for quicker access.
 
 Below are 2 properties we may want to check for this contract:
 
