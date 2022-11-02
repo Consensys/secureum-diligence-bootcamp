@@ -28,7 +28,7 @@ Below are 2 properties we may want to check for this contract:
 1. The 0 address is never an admin
 2. For every address `x` in the `admins` array, `isAdmin[x]` is true.
 
-Both of those can be expressed as a 'forall`. Even though property 1 doesn't have the words 'for all' in it, we can paraphrase it as "for every address `x` in `admins`/`isAdmin`, `x` is not 0".
+Both of those can be expressed as a `forall`. Even though property 1 doesn't have the words 'for all' in it, we can paraphrase it as "for every address `x` in `admins`/`isAdmin`, `x` is not 0".
 
 We can formalize these two informal properties in scribble, as the following contract invariants:
 
