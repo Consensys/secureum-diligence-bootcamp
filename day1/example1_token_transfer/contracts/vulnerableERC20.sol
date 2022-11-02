@@ -1,4 +1,4 @@
-pragma solidity ^0.8.0;
+pragma solidity 0.8.13;
 
 contract VulnerableToken {
   uint256 private _totalSupply;

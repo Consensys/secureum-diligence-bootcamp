@@ -2,8 +2,6 @@
 pragma solidity 0.8.13;
 
 
-/// #invariant let oldState := old(state) in state == State.Locked ==> oldState == State.Created || oldState == State.Locked;
-/// #invariant let oldState := old(state) in (state == State.Locked && oldState != state) ==> oldState == State.Created && buyer == msg.sender;
 contract Purchase {
     uint public value;
     address payable public seller;
@@ -96,7 +94,6 @@ contract Purchase {
     /// This will release the locked ether.
     function confirmReceived()
         external
-        onlyBuyer
         inState(State.Locked)
     {
         emit ItemReceived();

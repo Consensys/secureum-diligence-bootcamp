@@ -1,6 +1,5 @@
 pragma solidity 0.8.13;
 
-/// #invariant unchecked_sum(_balances) == _totalSupply;
 contract VulnerableToken {
   uint256 private _totalSupply;
   mapping (address => uint256) private _balances;

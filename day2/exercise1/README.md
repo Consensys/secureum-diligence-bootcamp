@@ -1,13 +1,20 @@
-# Example1: Administrable
+# Exercise 1: forall, #if_updated, #if_assigned and #assert
 
-In this exercise we will try to combine what you've learned about `#forall`,
+In this exercise we will try to combine what you've learned about `forall`,
 `#if_updated` and `#let`/`#assert`.  This is an exercise in several parts. In
 each part you will add some annotations, and then verify that the code can be
-instrumented, and the tests run without failures. In the end you will submit your completed solidity file for 
+instrumented, and the tests run without failures. In the end you will submit
+your completed solidity file for review.
 
 ## Setup
 
-To complete this exercise you will need `git`, `node` (version 16.0 or later) and `npm`.
+To complete this exercise you will need `git`, `node` (version 16.0 or later) and `npm` and `scribble`.
+You can install scribble globally by running:
+
+```
+npm install -g eth-scribble
+```
+
 After you have checked out this repo, you can install the needed packages by running:
 
 ```
@@ -55,9 +62,7 @@ As warmup, translate the following english language properties into scribble ann
 
 Translate the following property into a scribble annotation. Make sure that the contract can be instrumented, compiled, and all tests pass successfully.
 
-1. At all times, for each recipient, the `dispersed` amount is always less than or equal to the total fraction that is owed to them.
-
-What annotation type will you pick here?
+1. Its always true that for each recipient, the `dispersed` amount is always less than or equal to the total fraction that is owed to them.
 
 ## Part 2: `if_updated`
 

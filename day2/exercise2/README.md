@@ -15,7 +15,13 @@ In order to test your annotations, you can use the skeleton test code we have gi
 
 ## Setup
 
-To complete this exercise you will need `git`, `node` (version 16.0 or later) and `npm`.
+To complete this exercise you will need `git`, `node` (version 16.0 or later) and `npm` and `scribble`.
+You can install scribble globally by running:
+
+```
+npm install -g eth-scribble
+```
+
 After you have checked out this repo, you can install the needed packages by running:
 
 ```
@@ -83,6 +89,7 @@ describe("ERC20", async function () {
 
 4. (harder) Change the (uninstrumented) open zeppelin code, to introduce a bug, that is *caught* by your instrumentation.
 
+To get you started, we have already added the dummy token code and tests from the example above.
 
 ## Submission
 

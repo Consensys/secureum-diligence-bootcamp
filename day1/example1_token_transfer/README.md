@@ -1,17 +1,23 @@
-# Exercise1: Vulnerable ERC20 Token
+# Example 1: Vulnerable ERC20 Token
 
-In this exercise we will learn how to do a basic Scribble instrumentation, and
+In this example we will learn how to do a basic Scribble instrumentation, and
 demonstrate that it catches a bug by writing a test. Later while using
 Diligence Fuzzing (or other tools) you will not need to write your own tests -
 this will be the job of the fuzzing engine/other tool.
 
 ## Setup
 
-To run this tutorial you will need `git`, `node` (verison 16.0 or later) and `npm`.
+To run this tutorial you will need `git`, `node` (verison 16.0 or later) and `npm` and `scribble`.
+You can install scribble globally by running:
+
+```
+npm install -g eth-scribble
+```
+
 After you have checked out this repo, you can install the needed packages by running:
 
 ```
-cd day1/exercise1_token_transfer
+cd day1/example1_token_transfer
 npm install
 ```
 
@@ -34,7 +40,7 @@ with a concrete test.
 
 There are many things that we can say we expect hold true of the `transfer()` function. One thing we can say for example is that:
 
-"If the `transfer(to, amount)` call succeeds, then the balance of the `msg.sender` will decrease by `amount`.
+> If the `transfer(to, amount)` call succeeds, then the balance of the `msg.sender` will decrease by `amount`.
 
 This can be encoded by adding the following docstring above `transfer()`:
 
@@ -96,7 +102,7 @@ The logic of the original `transfer()` function has been moved into
 `transfer()` function. The new function calls the original function, and
 implements the check from the annotation. It stores the balance of `msg.sender`
 before calling `_original_VulnerableToken_transfer` in `_v.old_0`, and uses that
-to compute wether the annotation holds. If it doesn't, it emits an
+to compute whether the annotation holds. If it doesn't, it emits an
 `AssertionFailed` event and triggers an assertion failure.
 
 ## Testing the annotation
@@ -176,4 +182,4 @@ scribble --disarm contracts/vulnerableERC20.sol --output-mode files
 ```
 
 This is the same as the instrumentation command above, only with `--arm`
-replaced with `--disarm`.  At this point we are done with the exercise.
+replaced with `--disarm`.  At this point we are done with the example.

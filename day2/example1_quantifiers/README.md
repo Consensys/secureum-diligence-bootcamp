@@ -1,11 +1,17 @@
-# Example1: Administrable
+# Example1: Quantifiers
 
-In this example we will learn how to use universal qunatification (forall) over
+In this example we will learn how to use universal quantification (forall) over
 containers (maps and arrays) in Scribble.
 
 ## Setup
 
-To run this tutorial you will need `git`, `node` (verison 16.0 or later) and `npm`.
+To run this tutorial you will need `git`, `node` (version 16.0 or later) and `npm` and `scribble`.
+You can install scribble globally by running:
+
+```
+npm install -g eth-scribble
+```
+
 After you have checked out this repo, you can install the needed packages by running:
 
 ```

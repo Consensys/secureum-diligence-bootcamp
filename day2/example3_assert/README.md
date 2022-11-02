@@ -1,11 +1,17 @@
-# Example1: Administrable
+# Example 3: #assert and #let
 
 In this example we will learn how to use annotations before individual statements - `#assert` and `#let`.
-To motivate their use, we will look at a sample 'batch transfer' function in the `BatchTransfer` contract.
+To motivate their use, we will look at the 'batchSend' function in the provided `BatchSend` contract.
 
 ## Setup
 
-To run this tutorial you will need `git`, `node` (version 16.0 or later) and `npm`.
+To run this tutorial you will need `git`, `node` (version 16.0 or later) and `npm` and `scribble`.
+You can install scribble globally by running:
+
+```
+npm install -g eth-scribble
+```
+
 After you have checked out this repo, you can install the needed packages by running:
 
 ```
@@ -15,7 +21,7 @@ npm install
 
 ## The problem
 
-In `contracts/BatchTransfer.sol` we have provided a simple contract `BatchTransfer` that sends a certain amount of eth to a bunch of addresses. One informal property we may want to state about this contract is that: "We expect all transfers to succeed".
+In `contracts/BatchSend.sol` we have provided a simple contract `BatchSend` that sends a certain amount of eth to a bunch of addresses. One informal property we may want to state about this contract is that: "We expect all transfers to succeed".
 
 At first we can try to express this as an `if_succeeds` property, that specifies that the balance of the i-th receiver changes by the i-th amount:
 
@@ -29,9 +35,9 @@ At first we can try to express this as an `if_succeeds` property, that specifies
 However when we try to instrument this we run into an error:
 
 ```
-$ scribble --arm contracts/BatchTransfer.sol --output-mode files
-contracts/BatchTransfer.sol:5:61 TypeError: Forall variable i doesn't have old() in its range definition, but used in an old() expression
-contracts/BatchTransfer.sol:5:61:
+$ scribble --arm contracts/BatchSend.sol --output-mode files
+contracts/BatchSend.sol:5:61 TypeError: Cannot use forall variable i inside of an old() context since the whole forall is not in the old context.
+contracts/BatchSend.sol:5:61:
   /// #if_succeeds forall(uint i in receivers) old(receivers[i].balance) + amounts[i] == receivers[i].balance;
 ```
 
@@ -53,14 +59,14 @@ Scribble adds to in-line annotations - `#let` and `#assert` that can be inserted
 
 Note the dummy `0;` statement we added at the end. This is a syntactic limitation of the AST building process, which requires us to add a dummy statement in order to insert an annotation at the end of a basic block.
 
-At this point you can instrument the code, and run the tests, and verify that one of the tests fails.
+At this point you can instrument the code, run the tests, and verify that one of the tests fails.
 
 ## Instrumenting with scribble
 
 We can instrument the invariants as usual with scribble:
 
 ```
-scribble --arm contracts/BatchTransfer.sol --output-mode files
+scribble --arm contracts/BatchSend.sol --output-mode files
 ```
 
 And now if we run the tests:
@@ -74,7 +80,7 @@ We will notice that the "Send with reject" test fails as expected:
 ```sh
 $ npx hardhat test
 ...
-  BatchTransfer
+  BatchSend
     ✔ Send (53ms)
     ✔ Send with duplicates (55ms)
     1) Send with reject
@@ -83,10 +89,10 @@ $ npx hardhat test
   2 passing (1s)
   1 failing
 
-  1) BatchTransfer
+  1) BatchSend
        Send with reject:
      Error: VM Exception while processing transaction: reverted with panic code 0x1 (Assertion error)
-    at BatchTransfer.batchSend (contracts/BatchTransfer.sol:22)
+    at BatchSend.batchSend (contracts/BatchSend.sol:22)
     at processTicksAndRejections (node:internal/process/task_queues:96:5)
     at runNextTicks (node:internal/process/task_queues:65:3)
     at listOnTimeout (node:internal/timers:528:9)
@@ -100,5 +106,5 @@ At this point you can undo the instrumentation with:
 
 
 ```
-scribble --disarm contracts/BatchTransfer.sol --output-mode files
+scribble --disarm contracts/BatchSend.sol --output-mode files
 ```

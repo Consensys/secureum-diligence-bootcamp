@@ -1,7 +1,5 @@
 pragma solidity 0.8.13;
 
-/// #invariant forall (address a in isAdmin) a != address(0);
-/// #invariant forall (uint i in admins) isAdmin[admins[i]];
 contract Administrable {
   address[] admins;
   mapping (address => bool) public isAdmin;

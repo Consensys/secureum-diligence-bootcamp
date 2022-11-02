@@ -1,14 +1,20 @@
-# Exercise2: Invariants
+# Exercise 2: Invariants
 
 In the previous exercise we learned about the simplest kind of Scribble
 annotation - `#if_succeeds` on functions. Apart from annotating functions,
 scribble also allows you to annotate entire contracts. One possible annotation
 is the `#invariant` annotation on a contract, that we will explore in this
-tutorial.
+exercise.
 
 ## Setup
 
-To run this tutorial you will need `git`, `node` (version 16.0 or later) and `npm`.
+To run this tutorial you will need `git`, `node` (version 16.0 or later) and `npm` and `scribble`.
+You can install scribble globally by running:
+
+```
+npm install -g eth-scribble
+```
+
 After you have checked out this repo, you can install the needed packages by running:
 
 ```

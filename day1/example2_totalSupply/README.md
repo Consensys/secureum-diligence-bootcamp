@@ -1,34 +1,40 @@
-# Exercise2: Invariants
+# Example 2: Invariants
 
-In the previous exercise we learned about the simplest kind of Scribble
-annotation - `if_succeeds` invariants on functions. Apart from annotating
+In the previous example we learned about the simplest kind of Scribble
+annotation - `#if_succeeds` invariants on functions. Apart from annotating
 functions, scribble also allows you to annotate entire contracts. One possible
 annotation is the `#invariant` annotation on a contract, that we will explore in this
 tutorial.
 
 ## Setup
 
-To run this tutorial you will need `git`, `node` (verison 16.0 or later) and `npm`.
+To run this tutorial you will need `git`, `node` (version 16.0 or later) and `npm` and `scribble`.
+You can install scribble globally by running:
+
+```
+npm install -g eth-scribble
+```
+.
 After you have checked out this repo, you can install the needed packages by running:
 
 ```
-cd day1/exercise1_token_transfer
+cd day1/example1_token_transfer
 npm install
 ```
 
 ## Invariants
 
 We will look at the same `VulnerableToken` contract as in the previous example.
-But this time we will try to express a a property that shouldn't just hold after
+But this time we will try to express a property that shouldn't just hold after
 one function succeeds, but instead it should hold when *every* external call
 into the contract succeeds. Even more, this property should hold whenever the
 contract itself makes an external call to another contract. This way, the
-proprty is true whenever we look at the contract's state, while the contract is
+property is true whenever we look at the contract's state, while the contract is
 not executing.
 
 In english, the property can be expressed as:
 
-"Its always true that the sum of all (non-zero) values in `_balances` is equal to the `_totalSupply` state variable.
+Its always true that the sum of all (non-zero) values in `_balances` is equal to the `_totalSupply` state variable.
 
 The reason for checking that this property is true only when the contract is not itself executing, is that the contract may temporarily violate it while updating its own state. For example consider these two lines from `transferFrom`:
 
@@ -39,7 +45,7 @@ The reason for checking that this property is true only when the contract is not
 
 Right between those two lines, the property stated above is temporarily violated. But its established right after the second line, and well before we exit the call to `transferFrom`.
 
-We can express this property with the following annotaiton:
+We can express this property with the following annotation:
 
 ```
 /// #invariant unchecked_sum(_balances) == _totalSupply;
@@ -53,7 +59,7 @@ this contract, and all inheriting contracts (and in several other places).
 
 The `unchecked_sum` keyword is a builtin Scribble aggregator that computes the
 sum of all values in a container. (in the case of mappings all *explicitly
-assgined* values).
+assigned* values).
 
 
 ## Instrumenting and testing
