@@ -1,49 +1,49 @@
 # Secureum X Diligence bootcamp: Writing Scribble Specifications and Using Diligence Fuzzing (November 3–9, 2022)
 
-This bootcamp is a collaboration between [Secureum](https://www.secureum.xyz) and [ConsenSys Diligence](https://consensys.net/diligence). We will teach participants how to specify custom correctness properties for their smart contracts using our [Scribble language](https://consensys.net/diligence/scribble). We will also introduce them to our [Diligence Fuzzing service](https://consensys.net/diligence/fuzzing) and show them how to use fuzzing to find property violations automatically.
+This bootcamp is a collaboration between [Secureum](https://www.secureum.xyz) and [ConsenSys Diligence](https://consensys.net/diligence). We will teach participants how to specify custom correctness properties for their smart contracts using our [Scribble language](https://consensys.net/diligence/scribble). We will also introduce them to our [Diligence Fuzzing service](https://consensys.net/diligence/fuzzing) (DF) and show them how to use fuzzing to find property violations automatically.
 
 
 ## Schedule (preliminary)
 
-### Day 1
+### Day 1 (November 3, 2022)
 
-- **intro lecture to Scribble (30-45 min)**
-  1) provides an overview of Scribble and key language features
-  2) introduce course website with exercises, resources, etc.
+- **course kick-off and intro lecture to Scribble (30-45 min)**
+  1) introduce course website with exercises, resources, etc.
+  2) provides an overview of Scribble and key language features
   3) introduces initial Scribble exercises
 
 
-### Day 2
+### Day 2 (November 4 2022)
 
 - **advanced Scribble lecture (30-45 min)**
   1) introduces more advanced Scribble features (e.g., if_updated, quantifiers, and assert/let)
   2) introduces additional Scribble exercises
 
-- **office hour (60 min, get help with Scribble exercises and discuss solutions)**
+- **office hour (60 min)**: get help with Scribble exercises and discuss solutions
 
 
-### Day 3
+### Day 3 (November 7, 2022)
 
 - **intro lecture to Diligence Fuzzing (30-45 min)**
   1) provides an overview of DF and shows how to fuzz a simple contract
   2) introduces initial DF exercises
 
-- **office hour (60 min, get help with Scribble exercises and discuss solutions)**
+- **office hour (60 min)**: get help with Scribble/DF exercises and discuss solutions
 
 
-### Day 4
+### Day 4 (November 8, 2022)
 
-- **advanced DF lecture (e.g., differential fuzzing and other advanced topics) (30-45 min)**
+- **advanced Diligence Fuzzing lecture (30-45 min)**
   1) introduces more advanced DF features (e.g., fuzzing lessons)
-  2) provides an overview of what's going on under the hood in Harvey
+  2) provides an overview of what's going on under the hood in our Harvey fuzzer
   3) introduces additional fuzzing exercises
 
-- **office hour (60 min, get help with Scribble/DF exercises and discuss solutions)**
+- **office hour (60 min)**: get help with Scribble/DF exercises and discuss solutions
 
 
-### Day 5
+### Day 5 (November 9, 2022)
 
-- **office hour (60 min, get help with Scribble/DF exercises and discuss solutions)**
+- **office hour (60 min)**: get help with Scribble/DF exercises and discuss solutions
 
 
 **TODOs:**
