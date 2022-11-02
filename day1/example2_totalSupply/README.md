@@ -54,7 +54,7 @@ contract VulnerableToken {
 ```
 
 Unlike the `if_succeeds` annotation, `#invariant` can only be applied in a
-docstring above a contract. It is checked on all public/external function of
+docstring above a contract. It is checked on all public/external functions of
 this contract, and all inheriting contracts (and in several other places).
 
 The `unchecked_sum` keyword is a builtin Scribble aggregator that computes the
