@@ -18,7 +18,7 @@ npm install -g eth-scribble
 After you have checked out this repo, you can install the needed packages by running:
 
 ```
-cd day1/example1_token_transfer
+cd day1/example2_totalSupply
 npm install
 ```
 
