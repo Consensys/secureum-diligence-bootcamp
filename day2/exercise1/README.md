@@ -3,8 +3,7 @@
 In this exercise we will try to combine what you've learned about `forall`,
 `#if_updated` and `#let`/`#assert`.  This is an exercise in several parts. In
 each part you will add some annotations, and then verify that the code can be
-instrumented, and the tests run without failures. In the end you will submit
-your completed solidity file for review.
+instrumented, and the tests run without failures.
 
 ## Setup
 
