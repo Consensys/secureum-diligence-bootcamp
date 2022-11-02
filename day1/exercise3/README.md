@@ -2,7 +2,7 @@
 
 So far we have learned about annotations on contracts (`#invariant`), and annotations on functions (`#if_succeeds`).
 It turns out however, that you can also use the `if_succeeds` annotation on contracts as well. When you use `if_succeeds` on a contract,
-its the same as adding that `if_succeeds` to every function in the contract. We will use an `if_succeeds` on the contract level for the following exercise.
+it's the same as adding that `if_succeeds` to every function in the contract. We will use an `if_succeeds` on the contract level for the following exercise.
 
 ## Setup
 
