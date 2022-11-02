@@ -34,7 +34,7 @@ not executing.
 
 In english, the property can be expressed as:
 
-Its always true that the sum of all (non-zero) values in `_balances` is equal to the `_totalSupply` state variable.
+It's always true that the sum of all (non-zero) values in `_balances` is equal to the `_totalSupply` state variable.
 
 The reason for checking that this property is true only when the contract is not itself executing, is that the contract may temporarily violate it while updating its own state. For example consider these two lines from `transferFrom`:
 
