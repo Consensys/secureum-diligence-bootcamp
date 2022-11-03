@@ -2,7 +2,7 @@
 
 In this example we will learn how to use annotations on individual state
 variables - `#if_updated` and `#if_assigned`.  We will use the same sample
-`Administrable` contract as the previous `forall` exercise, but this time
+`Administrable` contract as in the previous `forall` exercise, but this time
 instead of adding the annotation as an `#invariant` that is checked at
 observable points on the contract, we will add it as an
 `#if_updated`/`#if_assigned` annotation that is checked each time the target
