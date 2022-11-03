@@ -1,6 +1,6 @@
-# Exercise 2: Annotating Open Zeppelin
+# Exercise 2: Annotating OpenZeppelin contracts
 
-This exercise is more open ended. Feel free to pick one or more of the following OpenZeppelin contracts and add any annotations you see fit:
+This exercise is more open-ended. Feel free to pick one or more of the following OpenZeppelin contracts and add any annotations you see fit:
 
 - ERC20 (https://docs.openzeppelin.com/contracts/4.x/erc20)
 - ERC20Votes (https://docs.openzeppelin.com/contracts/4.x/api/token/erc20#ERC20Votes)
@@ -25,7 +25,7 @@ npm install -g eth-scribble
 After you have checked out this repo, you can install the needed packages by running:
 
 ```
-cd day2/exercise2/
+cd day2/exercise2
 npm install
 ```
 
@@ -33,7 +33,7 @@ This will install OpenZeppelin's contracts under `node_modules/`.
 
 ## Suggested Workflow
 
-In order to exercise your annotated contracts, you can either subclass them with your own contract under `contracts/` or use them directly in the test. For example, lets say you add an annotation to `node_modules/@openzeppelin/contracts/token/ERC20/ERC20.sol` like so:
+In order to exercise your annotated contracts, you can either subclass them with your own contract under `contracts/` or use them directly in the test. For example, let's say you add an annotation to `node_modules/@openzeppelin/contracts/token/ERC20/ERC20.sol` like so:
 
 ```
  * #invariant _totalSupply == unchecked_sum(_balances);
@@ -43,7 +43,7 @@ contract ERC20 is Context, IERC20, IERC20Metadata {
 
 In order to exercise your annotation, you can use the following steps:
 
-1. Add a dummy contract under contracts/ that inherits from your target contract. In the case where you are trying to inherit from ERC20 you can do something like this:
+1. Add a dummy contract under `contracts/` that inherits from your target contract. In the case where you are trying to inherit from ERC20 you can do something like this:
 
 ```
 pragma solidity 0.8.13;
@@ -62,7 +62,7 @@ contract Dummy is ERC20("Dummy", "DMMY") {
 `scribble --arm contracts/Dummy.sol --output-mode files`
 
 
-3. Add test code in `test/OZ_contracts.js` that tests your dummy contract. E.g.:
+3. Add test code in `test/OZ_contracts.js` that tests your dummy contract. For example:
 
 ```
 describe("ERC20", async function () {
@@ -84,10 +84,9 @@ describe("ERC20", async function () {
 });
 ```
 
-3. Make sure your *instrumented* code passes all tests
+4. Make sure your *instrumented* code passes all tests
 
-
-4. (harder) Change the (uninstrumented) open zeppelin code, to introduce a bug, that is *caught* by your instrumentation.
+5. (harder) Change the (uninstrumented) OpenZeppelin code, to introduce a bug, that is *caught* by your instrumentation.
 
 To get you started, we have already added the dummy token code and tests from the example above.
 
