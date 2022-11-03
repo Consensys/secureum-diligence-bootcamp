@@ -23,4 +23,13 @@ describe("vulnerableERC20", async function () {
 
     expect(balanceBefore).to.be.lte(balanceAfter);
   })
+
+  it("Transfer same", async () => {
+    const balanceBefore = await vulnerableToken.balanceOf(acct1.address);
+    await vulnerableToken.connect(acct1).approve(acct1.address, 1)
+    await vulnerableToken.connect(acct1).transfer(acct1.address, 1);
+    const balanceAfter =  await vulnerableToken.balanceOf(acct1.address);
+
+    expect(balanceBefore).to.be.lte(balanceAfter);
+  })
 });
