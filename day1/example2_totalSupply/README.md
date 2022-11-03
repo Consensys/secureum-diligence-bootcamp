@@ -75,42 +75,23 @@ After running this, if we open up `contracts/vulnerableERC20.sol` we would find 
 
 ## Testing the annotation
 
-The test in `test/vulnerableERC20.js` is the same test as in the previous example - moving 1 wei from one address to another. Again this doesn't catch the edge case
-in `transfer()` that causes the failure. You can run `npx hardhat test` after instrumenting and the test will succeed.
+The tests in `test/vulnerableERC20.js` are the same tests as in the previous example - moving 1 wei from one address to another.
 
-Again change the following lines:
-
-```
-    const balanceBefore = await vulnerableToken.balanceOf(acct2.address);
-    await vulnerableToken.connect(acct1).approve(acct2.address, 1)
-    await vulnerableToken.connect(acct1).transfer(acct2.address, 1);
-    const balanceAfter =  await vulnerableToken.balanceOf(acct2.address);
-```
-
-to:
-
-```
-    const balanceBefore = await vulnerableToken.balanceOf(acct1.address);
-    await vulnerableToken.connect(acct1).approve(acct1.address, 1)
-    await vulnerableToken.connect(acct1).transfer(acct1.address, 1);
-    const balanceAfter = await vulnerableToken.balanceOf(acct1.address);
-```
-
-Essentially what we've done is change the test to transfer from `acct1` back to itself, instead of into `acct2`.
-Now if you run the test again you will get an assertion failure:
+Again if you run these tests without any instrumentation you won't encounter any issues. However if you run them after instrumenting, you will observe the following failure:
 
 ```sh
 $ npx hardhat test
 ...
   vulnerableERC20
-    1) Transfer
+    ✔ Transfer (66ms)
+    1) Transfer same
 
 
-  0 passing (2s)
+  1 passing (3s)
   1 failing
 
   1) vulnerableERC20
-       Transfer:
+       Transfer same:
      Error: VM Exception while processing transaction: reverted with panic code 0x1 (Assertion error)
     at VulnerableToken.__scribble_VulnerableToken_check_state_invariants_internal (contracts/vulnerableERC20.sol:92)
     at VulnerableToken.__scribble_check_state_invariants (contracts/vulnerableERC20.sol:99)
