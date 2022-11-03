@@ -32,7 +32,7 @@ At first we can try to express this as an `if_succeeds` property, that specifies
     uint[] memory amounts) public {
 ```
 
-However when we try to instrument this we run into an error:
+However, when we try to instrument this we run into an error:
 
 ```
 $ scribble --arm contracts/BatchSend.sol --output-mode files
@@ -46,7 +46,7 @@ Alternatively, we could try to make an `old()` copy of the entire `receivers` ar
 
 At this point we are stuck. How do we talk about the value of each address before and after the transfer, if we can't use a `forall`? Inline statements to the rescue!
 
-Scribble adds to in-line annotations - `#let` and `#assert` that can be inserted before any statement in a function. `#let` allows users to create ghost local variables, while an `#assert` acts just like a normal assert, but it can also use the ghost local variables in scope. With those two its trivial to express our desired behavior:
+Scribble allows inline annotations - `#let` and `#assert` that can be inserted before any statement in a function. `#let` allows users to create ghost local variables, while an `#assert` acts just like a normal assert, but it can also use the ghost local variables in scope. With those two it's trivial to express the desired behavior:
 
 ```
       for (uint i = 0; i < receivers.length; i++) {
