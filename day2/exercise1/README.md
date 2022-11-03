@@ -23,13 +23,13 @@ npm install
 
 ## The contract 
 
-In `contracts/TimedSafe.sol` we have provided a simple contract `TimedSafe` that stores some amount of eth for a specified amount of time. After that amount of time has passed, the eth can be split amongst a set of recipients, each recipient getting a specified fraction of the total amount of eth. When the contract is constructed, the recipients, fractions, and amount of time to lock the account (in seconds) are set:
+In `contracts/TimedSafe.sol` we have provided a simple contract `TimedSafe` that stores some amount of ETH for a specified amount of time. After that amount of time has passed, the ETH can be split amongst a set of recipients, each recipient getting a specified fraction of the total amount of ETH. When the contract is constructed, the recipients, fractions, and amount of time to lock the account (in seconds) are set:
 
 ```
   constructor(address[] memory _recepients, uint256[] memory _fractions, uint _duration) payable {
 ```
 
-After the amount of time has expired the contract provides 2 ways to get the eth out - `withdrawFunds()` withdraws only the funds for one recipient (the `msg.sender`). `disperseFunds` on the other hand sends the funds for all recipients with a single call.
+After the amount of time has expired the contract provides two ways to get the ETH out - `withdrawFunds()` withdraws only the funds for one recipient (the `msg.sender`). `disperseFunds` on the other hand sends the funds for all recipients with a single call.
 
 As usual you can instrument this contract with:
 
@@ -40,7 +40,6 @@ scribble --arm contracts/TimedSafe.sol --output-mode files
 and revert the instrumentation with:
 
 ```
-
 scribble --disarm contracts/TimedSafe.sol --output-mode files
 ```
 
@@ -48,9 +47,9 @@ You can run tests with `npx hardhat test`. Before you start make sure all tests 
 
 ## Warmup: `invariants`, `if_succeeds` and `unchecked_sum`
 
-As warmup, translate the following english language properties into scribble annotations. Make sure that the contract can be instrumented, compiled, and all tests pass successfully.
+As a warmup, translate the following english language properties into scribble annotations. Make sure that the contract can be instrumented, compiled, and all tests pass successfully.
 
-1. At all times, the sum of all `faction`'s equals to "DECIMALS" (i.e. the fractions add up to 1).
+1. At all times, the sum of all `faction`'s equals to "DECIMALS" (i.e., the fractions add up to 1).
 
 2. `withdrawFunds` and `disperseFunds` can only be called after `duration` has passed (or after we've reached `releaseTime`).
 
@@ -61,7 +60,7 @@ As warmup, translate the following english language properties into scribble ann
 
 Translate the following property into a scribble annotation. Make sure that the contract can be instrumented, compiled, and all tests pass successfully.
 
-1. Its always true that for each recipient, the `dispersed` amount is always less than or equal to the total fraction that is owed to them.
+1. It's always true that for each recipient, the `dispersed` amount is always less than or equal to the total fraction that is owed to them.
 
 ## Part 2: `if_updated`
 
