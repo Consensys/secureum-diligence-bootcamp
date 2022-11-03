@@ -107,49 +107,35 @@ to compute whether the annotation holds. If it doesn't, it emits an
 
 ## Testing the annotation
 
-In `test/vulnerableERC20.js` we wrote a simple test that moves 1 wei from one address to another. You can run this test after instrumenting and verify that it still passes after instrumenting, by running:
+In `test/vulnerableERC20.js` we wrote two simple test that both moves 1 wei from one address to another. You can run these tests before instrumenting like so:
 
 ```
 npx hardhat test
 ```
 
-The fact that the annotation holds for one test, or even a hundred tests
-*doesn't make it true*. And we can demonstrate this by tweaking the test
-a little. Change the following lines:
+And you should see them both succeed:
 
 ```
-    const balanceBefore = await vulnerableToken.balanceOf(acct2.address);
-    await vulnerableToken.connect(acct1).approve(acct2.address, 1)
-    await vulnerableToken.connect(acct1).transfer(acct2.address, 1);
-    const balanceAfter =  await vulnerableToken.balanceOf(acct2.address);
+  vulnerableERC20
+    ✔ Transfer (85ms)
+    ✔ Transfer same (89ms)
 ```
 
-to:
-
-```
-    const balanceBefore = await vulnerableToken.balanceOf(acct1.address);
-    await vulnerableToken.connect(acct1).approve(acct1.address, 1)
-    await vulnerableToken.connect(acct1).transfer(acct1.address, 1);
-    const balanceAfter = await vulnerableToken.balanceOf(acct1.address);
-```
-
-Essentially what we've done is change the test to transfer from `acct1` back to itself, instead of into `acct2`. We just happen to know that this particular test
-may trip up our annotation. As you will find in later lectures, in practice the work of finding these weird edge cases is (mostly) done by the fuzzer, not by you.
-
-Now if you run the test again you will get an assertion failure:
+However if you run the tests *after* you instrument, you will observe the second test failing:
 
 ```sh
 $ npx hardhat test
 ...
   vulnerableERC20
-    1) Transfer
+    ✔ Transfer (88ms)
+    1) Transfer same
 
 
-  0 passing (1s)
+  1 passing (2s)
   1 failing
 
   1) vulnerableERC20
-       Transfer:
+       Transfer same:
      Error: VM Exception while processing transaction: reverted with panic code 0x1 (Assertion error)
     at VulnerableToken.transfer (contracts/vulnerableERC20.sol:46)
     at processTicksAndRejections (node:internal/process/task_queues:96:5)
