@@ -35,7 +35,7 @@ Lets try to check the following property:
 We can formalize this informal property in scribble, as the following `#if_updated` annotation on the state variables themselves:
 
 ```
-/// #if_updated forall (address a in isAdmin) a != address(0);
+/// #if_updated forall (address a in admins) a != address(0);
 address[] admins;
 
 /// #if_updated forall (address x in isAdmin) x != address(0);
