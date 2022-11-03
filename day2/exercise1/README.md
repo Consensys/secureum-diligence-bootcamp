@@ -17,7 +17,7 @@ npm install -g eth-scribble
 After you have checked out this repo, you can install the needed packages by running:
 
 ```
-cd day2/exercise1/
+cd day2/exercise1
 npm install
 ```
 
