@@ -99,7 +99,7 @@ scribble --disarm contracts/Administrable.sol --output-mode files
 
 ## Checking with #if_assigned
 
-The annotations we added walk over all entries in the `admins`/`isAdmin` variables, even if we are only updating only one entry. This is a little wasteful.
+The annotations we added walk over all entries in the `admins`/`isAdmin` variables, even if we are only updating one entry. This is a little wasteful.
 To fix this, we also provide an alternative `#if_assigned` annotation. Unlike `#if_updated`, `#if_assigned` allows us to talk about updates to a specific part of a datastructure. For example, if we want to only check something when an *individual* entry in the `admins` array is updated, we can write this as follows:
 
 ```
@@ -119,14 +119,14 @@ Note the `[i]` after `if_assigned`. This allows us to talk about the case when o
 
 You should again be able to instrument the code, run tests, and verify that one test fails.
 
-WARNING: `if_assigned` can be a little tricky. Because it talks about only one part of the datastructure, its possible that values change unexpectedly. For example if you have:
+WARNING: `if_assigned` can be a little tricky. Because it talks about only one part of the datastructure, it's possible that values change unexpectedly. For example if you have:
 
 ```
   /// #if_assigned[i] admins[i] != address(0);
   address[] admins;
 ```
 
-you might expect that its not possible for the `admins` array to contain 0s. However this possible with the following 2 statements:
+you might expect that it's not possible for the `admins` array to contain 0s. However this is possible with the following two statements:
 
 ```
 admins = [address(0), address(0)];
@@ -138,6 +138,6 @@ or
 admins.push(address(0));
 ```
 
-Since in those 2 statements we are simultaneously changing some values, and potentially adding/deleting values, its hard to instrument those with `if_assigned`, so for now we omit those.
+Since in those two statements we are simultaneously changing some values, and potentially adding/deleting values, it's hard to instrument those with `if_assigned`, so for now we omit those.
 
-As a rule of thumb, always try to use `if_updated` as its safer (its checked on *any* updated). Only use `if_assigned` if you can't express what you need with `if_updated`, or if the instrumentation overhead is too large.
+As a rule of thumb, always try to use `if_updated` as it's safer (it's checked on *any* updated). Only use `if_assigned` if you can't express what you need with `if_updated`, or if the instrumentation overhead is too large.
