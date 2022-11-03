@@ -15,7 +15,7 @@ npm install -g eth-scribble
 After you have checked out this repo, you can install the needed packages by running:
 
 ```
-cd day2/example3_assert/
+cd day2/example3_assert
 npm install
 ```
 
