@@ -65,6 +65,7 @@ This bootcamp is a collaboration between [Secureum](https://www.secureum.xyz) an
 
 #### Day 2
 
+- [recording](https://drive.google.com/file/d/1DJpwduUkgO5gutFJK70sFOOq3L8XDz7M/view?usp=sharing)
 - [slides](https://github.com/ConsenSys/secureum-diligence-bootcamp/blob/main/day2/lecture2.pdf)
 
 
