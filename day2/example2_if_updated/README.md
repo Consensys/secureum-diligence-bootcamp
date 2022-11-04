@@ -38,7 +38,7 @@ We can formalize this informal property in scribble, as the following `#if_updat
 /// #if_updated forall (uint i in admins) admins[i] != address(0);
 address[] admins;
 
-/// #if_updated forall (address x in isAdmin) x != address(0);
+/// #if_updated !isAdmin[address(0)];
 mapping (address => bool) public isAdmin;
 ```
 

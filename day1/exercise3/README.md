@@ -37,7 +37,7 @@ right actor (buyer or seller) can trigger a specific transition. In English, we 
 
 2. We can move into the `Release` state only from the `Locked` state. Only the `buyer` can do this move.
 
-Express the above 2 annotations as `#if_succeeds`s on the whole contract. Note that you may need more than 2 annotations to express this.
+Express the above 2 annotations as `#if_succeeds`s on the whole contract.
 
 You should confirm that you can instrument and test your code.
 
