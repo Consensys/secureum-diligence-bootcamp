@@ -60,11 +60,12 @@ This bootcamp is a collaboration between [Secureum](https://www.secureum.xyz) an
 #### Day 1
 
 - [recording](https://drive.google.com/file/d/1umkVxO3xX6Vu6cslWJ5xEZCXW7jQCC9o/view?usp=sharing)
+- [slides](https://github.com/ConsenSys/secureum-diligence-bootcamp/blob/main/day1/lecture1.pdf)
 
 
 #### Day 2
 
-TBA
+- [slides](https://github.com/ConsenSys/secureum-diligence-bootcamp/blob/main/day2/lecture2.pdf)
 
 
 #### Day 3
