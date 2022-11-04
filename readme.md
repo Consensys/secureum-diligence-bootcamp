@@ -15,11 +15,11 @@ This bootcamp is a collaboration between [Secureum](https://www.secureum.xyz) an
 
 ### Day 2 (November 4 2022)
 
-- **advanced Scribble lecture (14:30-15:15 CET)**
+- **advanced Scribble lecture (14:30-15:15 CET on [Google Meet](meet.google.com/cbf-pvku-yfg))**
   1) introduces more advanced Scribble features (e.g., if_updated, quantifiers, and assert/let)
   2) introduces additional Scribble exercises
 
-- **office hour (15:15-16:15 CET)**: get help with Scribble exercises and discuss solutions
+- **office hour (15:15-16:15 CET on [Google Meet](meet.google.com/cbf-pvku-yfg))**: get help with Scribble exercises and discuss solutions
 
 
 ### Day 3 (November 7, 2022)
@@ -59,7 +59,7 @@ This bootcamp is a collaboration between [Secureum](https://www.secureum.xyz) an
 
 #### Day 1
 
-TBA
+- [recording](https://drive.google.com/file/d/1umkVxO3xX6Vu6cslWJ5xEZCXW7jQCC9o/view?usp=sharing)
 
 
 #### Day 2
