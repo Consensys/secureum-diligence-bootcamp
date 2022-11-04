@@ -1,4 +1,4 @@
-# Example 2: #if_updated 
+# Example 4: #if_updated 
 
 In this example we will learn how to use annotations on individual state
 variables - `#if_updated` and `#if_assigned`.  We will use the same sample
@@ -20,7 +20,7 @@ npm install -g eth-scribble
 After you have checked out this repo, you can install the needed packages by running:
 
 ```
-cd day2/example2.2_if_assigned
+cd day2/example4_if_assigned
 npm install
 ```
 

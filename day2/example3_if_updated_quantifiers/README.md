@@ -1,4 +1,4 @@
-# Example1: Quantifiers
+# Example 3: Quantifiers
 
 In this example we will learn how to use universal quantification (forall) over
 containers (maps and arrays) in Scribble.
@@ -15,7 +15,7 @@ npm install -g eth-scribble
 After you have checked out this repo, you can install the needed packages by running:
 
 ```
-cd day2/example1_quantifiers
+cd day2/example3_if_updated_quantifiers
 npm install
 ```
 

@@ -1,4 +1,4 @@
-# Example 3: #assert and #let
+# Example 5: #assert and #let
 
 In this example we will learn how to use annotations before individual statements - `#assert` and `#let`.
 To motivate their use, we will look at the 'batchSend' function in the provided `BatchSend` contract.
@@ -15,7 +15,7 @@ npm install -g eth-scribble
 After you have checked out this repo, you can install the needed packages by running:
 
 ```
-cd day2/example3_assert
+cd day2/example5_assert
 npm install
 ```
 
