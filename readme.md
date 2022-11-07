@@ -24,11 +24,11 @@ This bootcamp is a collaboration between [Secureum](https://www.secureum.xyz) an
 
 ### Day 3 (November 7, 2022)
 
-- **intro lecture to Diligence Fuzzing (14:30-15:15 CET)**
+- **intro lecture to Diligence Fuzzing (14:30-15:15 CET on [Google Meet](meet.google.com/cbf-pvku-yfg))**
   1) provides an overview of DF and shows how to fuzz a simple contract
   2) introduces initial DF exercises
 
-- **office hour (15:15-16:15 CET)**: get help with Scribble/DF exercises and discuss solutions
+- **office hour (15:15-16:15 CET on [Google Meet](meet.google.com/cbf-pvku-yfg))**: get help with Scribble/DF exercises and discuss solutions
 
 
 ### Day 4 (November 8, 2022)
