@@ -96,7 +96,7 @@ TBA
 
 #### Day 3
 
-- [Exercise](https://github.com/ConsenSys/secureum-diligence-bootcamp/tree/main/day3/exercise)
+- [Exercise](https://github.com/ConsenSys/secureum-diligence-bootcamp/blob/main/day3/exercise.md)
 
 
 #### Day 4
