@@ -33,17 +33,17 @@ This bootcamp is a collaboration between [Secureum](https://www.secureum.xyz) an
 
 ### Day 4 (November 8, 2022)
 
-- **advanced Diligence Fuzzing lecture (14:30-15:15 CET)**
+- **advanced Diligence Fuzzing lecture (14:30-15:15 CET on [Google Meet](meet.google.com/cbf-pvku-yfg))**
   1) introduces more advanced DF features (e.g., fuzzing lessons)
   2) provides an overview of what's going on under the hood in our Harvey fuzzer
   3) introduces additional fuzzing exercises
 
-- **office hour (15:15-16:15 CET)**: get help with Scribble/DF exercises and discuss solutions
+- **office hour (15:15-16:15 CET on [Google Meet](meet.google.com/cbf-pvku-yfg))**: get help with Scribble/DF exercises and discuss solutions
 
 
 ### Day 5 (November 9, 2022)
 
-- **office hour (15:15-16:15 CET)**: get help with Scribble/DF exercises and discuss solutions
+- **office hour (15:15-16:15 CET on [Google Meet](meet.google.com/cbf-pvku-yfg))**: get help with Scribble/DF exercises and discuss solutions
 
 
 ## Instructors
@@ -102,6 +102,8 @@ TBA
 #### Day 4
 
 - [Exercise 1](https://github.com/ConsenSys/secureum-diligence-bootcamp/tree/main/day4/exercise1)
+
+- [Exercise 2](https://github.com/ConsenSys/secureum-diligence-bootcamp/tree/main/day4/exercise2)
 
 
 ### Scribble
