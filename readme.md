@@ -102,7 +102,6 @@ TBA
 #### Day 4
 
 - [Exercise 1](https://github.com/ConsenSys/secureum-diligence-bootcamp/tree/main/day4/exercise1)
-
 - [Exercise 2](https://github.com/ConsenSys/secureum-diligence-bootcamp/tree/main/day4/exercise2)
 
 
