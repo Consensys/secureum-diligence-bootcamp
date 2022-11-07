@@ -1,0 +1,8 @@
+{
+   "name":"fuzzing-lessons-tutorial",
+   "version":"1.0.0",
+   "devDependencies":{
+      "@nomicfoundation/hardhat-toolbox": "^2.0.0",
+      "hardhat": "^2.12.0"
+   }
+}

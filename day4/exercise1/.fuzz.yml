@@ -1,0 +1,13 @@
+fuzz:
+  build_directory: artifacts
+  ide: hardhat
+  deployed_contract_address: '0x<FILL_IN_ADDRESS>'
+  number_of_cores: 1
+  time_limit: 5m
+  project: Fuzzing Lessons Tutorial
+  campaign_name_prefix: GaslessDestroy
+  rpc_url: 'http://localhost:8545'
+  faas_url: 'http://fuzzing.diligence.tools'
+  key: ''
+  targets:
+    - contracts/GaslessDestroy.sol

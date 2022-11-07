@@ -101,7 +101,7 @@ TBA
 
 #### Day 4
 
-TBA
+- [Exercise 1](https://github.com/ConsenSys/secureum-diligence-bootcamp/tree/main/day4/exercise1)
 
 
 ### Scribble
@@ -117,6 +117,7 @@ TBA
 
 - [DF docs](https://fuzzing-docs.diligence.tools)
 - [DF command-line tool](https://github.com/ConsenSys/diligence-fuzzing)
+- [Increasing Code Coverage Using Fuzzing Lessons](https://consensys.net/diligence/blog/2022/10/increasing-code-coverage-using-fuzzing-lessons) (blog post)
 
 
 #### Harvey Fuzzer (optional)
