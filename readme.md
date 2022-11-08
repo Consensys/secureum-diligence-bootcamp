@@ -71,7 +71,7 @@ This bootcamp is a collaboration between [Secureum](https://www.secureum.xyz) an
 
 #### Day 3
 
-TBA
+- [recording](https://drive.google.com/file/d/1zwbp7VC5Y_wz-cWOyNdFnaB5QZ5RYcxF/view?usp=sharing)
 
 
 #### Day 4
