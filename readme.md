@@ -3,7 +3,7 @@
 This bootcamp is a collaboration between [Secureum](https://www.secureum.xyz) and [ConsenSys Diligence](https://consensys.net/diligence). We will teach participants how to specify custom correctness properties for smart contracts using our [Scribble language](https://consensys.net/diligence/scribble). We will also introduce them to our [Diligence Fuzzing service](https://consensys.net/diligence/fuzzing) (DF) and show them how to use fuzzing to find property violations automatically.
 
 
-## Schedule (preliminary)
+## Schedule
 
 ### Day 1 (November 3, 2022)
 
