@@ -76,6 +76,7 @@ This bootcamp is a collaboration between [Secureum](https://www.secureum.xyz) an
 
 #### Day 4
 
+- [recording](https://drive.google.com/file/d/1frI-bvSH1YNBKYcJFC0ndT4u1Hq5zxlL/view?usp=sharing)
 - [slides](https://github.com/ConsenSys/secureum-diligence-bootcamp/blob/main/day4/lecture4.pdf)
 
 
